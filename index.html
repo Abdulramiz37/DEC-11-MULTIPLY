@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication of 3 Numbers</title>
+    <style>
+        body {
+    background-color: #EFEFEF;
+    margin-top: 40px;
+    background: linear-gradient(to top right, #08aeea 0%, #b721ff 100%);
+    min-height: calc(100vh - 48px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    background: #E4E4E4;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 2em;
+    color: #555555;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 1em;
+    
+}
+button{
+    background: #b9adad;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 2em;
+    color: #0a0a0a;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 1em;
+}
+  
+    </style>
+</head>
+<body>
+    <h2>Nested functions</h2>
+    <divication of 3 numbers>
+        
+    <input type="number" id="a" placeholder="enter value of a">
+    <input type="number" id="b" placeholder="enter value of b">
+    <input type="number" id="c"placeholder="enter value of c">
+    <button> multiply  </button>
+</div>
+<div id="output"></div>
+    <script>
+            
+          function multiply(a){
+            return  function xyz(b){
+                  return  function pqr(c){
+                       return a*b*c;
+                   }
+               }
+           }
+
+         document.querySelector('button').addEventListener('click',()=>{
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let c = document.getElementById('c').value;
+             
+            let x= multiply(a)(b)(c);
+            console.log(x);
+             
+            let h1 = document.createElement('h1');
+            h1.innerText=x;
+            document.getElementById('output').appendChild(h1);
+            
+
+         })
+    </script>
+</body>
+</html>
